@@ -10,14 +10,14 @@ main()
 	upper = 300;		// 温度表的上限
 	step = 20;			// 步长
 	
-	fahr = lower;
+	fahr = upper;
 	
 	printf("Fahr to Celsius!\n");
 	
-	while (fahr <= upper) {
+	while (fahr >= lower) {
 		celsius = (5.0/9.0) * (fahr-32);
 		printf("%3.0f %6.1f\n", fahr, celsius);
-		fahr = fahr + step;
+		fahr = fahr - step;
 	}
 }
 
